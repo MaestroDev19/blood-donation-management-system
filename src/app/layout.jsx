@@ -1,7 +1,8 @@
-import { Outfit } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
-const nunito = Outfit({ subsets: ["latin"] });
+import Footer from "./components/footer";
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.className} bg-white`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
